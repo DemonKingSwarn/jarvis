@@ -3,7 +3,7 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
-name = "demon-intelligence"
+name = "demon-jarvis"
 version = "0.0.1a"
 description = "A local LLM voice assistant."
 authors = ["DemonKingSwarn <rockingswarn@gmail.com>"]
@@ -21,4 +21,4 @@ krfzf-py = "^0.0.4"
 [tool.poetry.dev-dependencies]
 
 [tool.poetry.scripts]
-jarvis = "demon-intelligence.__main__:__start__"
+jarvis = "jarvis.__main__:__start__"
