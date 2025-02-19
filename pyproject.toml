@@ -21,4 +21,4 @@ krfzf-py = "^0.0.4"
 [tool.poetry.dev-dependencies]
 
 [tool.poetry.scripts]
-jarvis = "jarvis.__main__:__start__"
+jarvis = "demon-intelligence.__main__:__start__"
