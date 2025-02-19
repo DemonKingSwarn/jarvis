@@ -5,5 +5,5 @@ A local LLM voice assistant
 ## Install
 
 ```sh
-pip install demon-intelligence
+pip install git+https://github.com/DemonKingSwarn/jarvis
 ```
