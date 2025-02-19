@@ -1,0 +1,24 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "demon-intelligence"
+version = "0.0.1a"
+description = "A local LLM voice assistant."
+authors = ["DemonKingSwarn <rockingswarn@gmail.com>"]
+license = "GPLv3"
+readme = "readme.txt"
+
+[tool.poetry.dependencies]
+python = "3.12"
+kokoro = "0.7.16"
+ollama = "0.4.7"
+soundfile = "0.13.1"
+numpy = "2.2.3"
+krfzf-py = "^0.0.4"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+jarvis = "jarvis.__main__:__start__"

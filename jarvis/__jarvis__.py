@@ -1,5 +1,6 @@
 from ollama import chat
 from kokoro import KPipeline
+from fzf import fzf_prompt
 import soundfile as sf
 import numpy as np
 
@@ -7,24 +8,18 @@ import subprocess as sp
 
 pipeline = KPipeline(lang_code='a')
 
+ollama_models = sp.run(['ollama', 'list'], capture_output=True, text=True)
+lines = ollama_models.stdout.splitlines()[1:]
+
+selected_model = fzf_prompt(lines)
+
+print(selected_model)
+
 def chat_with_me():
     answer = ""
     while True:
         query = input("You: ")
-        
-        """
-        query = '''
-        this prophecy is from percy jackson books
-
-        A half-blood of the eldest gods
-        Shall reach sixteen against all odds
-        And see the world in endless sleep
-        The hero's soul, cursed blade shall reap
-        A single choice shall end his days
-        Olympus to preserve or raze
-        '''
-        """
-    
+   
         stream = chat(
             model = "qwen2.5:3b",
             messages = [{'role': 'user', 'content': query}],
